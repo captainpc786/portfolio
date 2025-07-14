@@ -1,90 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Scientist Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Pushpendra Saini - Data Scientist</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="font-inter">
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">DS Portfolio</span>
+    <div class="navbar bg-base-100 text-base-content shadow-md border-b border-base-300 fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#resume" class="nav-link">Resume</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <a class="btn btn-ghost text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">PS</a>
         </div>
-    </nav>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <label class="swap swap-rotate">
+                <input type="checkbox" class="theme-controller" value="dark" />
+                <svg class="swap-on fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                <svg class="swap-off fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+            </label>
+        </div>
+    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Animated SVG shapes for modern look -->
-        <svg class="hero-svg" width="180" height="180" style="top: 30px; left: 5vw;" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="90" cy="90" r="80" fill="#00bcd4" fill-opacity="0.13"/>
-        </svg>
-        <svg class="hero-svg" width="120" height="120" style="bottom: 60px; right: 8vw;" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="100" height="100" rx="30" fill="#1a237e" fill-opacity="0.09"/>
-        </svg>
-        <svg class="hero-svg" width="90" height="90" style="top: 60px; right: 18vw;" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="45,10 80,80 10,80" fill="#00bcd4" fill-opacity="0.10"/>
-        </svg>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="gradient-text">Pushpendra Saini</span>
-                    <br>Data Scientist
+    <section id="home" class="hero min-h-screen bg-gradient-to-br from-base-200 to-base-300">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-8">
+            <!-- Expensive Modern Bubble Logo Cluster (no profile image, even more spacing) -->
+            <div class="w-full flex justify-center mb-10">
+                <div class="relative w-[650px] h-[260px] flex items-center justify-center">
+                    <!-- ML Bubble -->
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 animate-float" style="animation-delay:0s;">
+                        <div class="bubble-logo-glass bg-gradient-to-br from-primary/80 to-secondary/80 shadow-2xl">
+                            <i class="fas fa-brain text-3xl"></i>
+                            <span class="bubble-label">ML</span>
+                        </div>
+                    </div>
+                    <!-- Analytics Bubble -->
+                    <div class="absolute right-32 top-1/4 animate-float" style="animation-delay:0.2s;">
+                        <div class="bubble-logo-glass bg-gradient-to-br from-secondary/80 to-accent/80 shadow-2xl">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                            <span class="bubble-label">Analytics</span>
+                        </div>
+                    </div>
+                    <!-- Data Bubble -->
+                    <div class="absolute left-32 top-1/4 animate-float" style="animation-delay:0.4s;">
+                        <div class="bubble-logo-glass bg-gradient-to-br from-accent/80 to-primary/80 shadow-2xl">
+                            <i class="fas fa-database text-3xl"></i>
+                            <span class="bubble-label">Data</span>
+                        </div>
+                    </div>
+                    <!-- AI Bubble -->
+                    <div class="absolute left-1/2 -translate-x-1/2 bottom-6 animate-float" style="animation-delay:0.6s;">
+                        <div class="bubble-logo-glass bg-gradient-to-br from-info/80 to-primary/80 shadow-2xl">
+                            <i class="fas fa-robot text-3xl"></i>
+                            <span class="bubble-label">AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-text text-center lg:text-left w-full">
+                <div class="rect-badge mx-auto mb-8">
+                    <i class="fas fa-user-astronaut mr-2"></i> Hello, I'm
+                </div>
+                <h1 class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Pushpendra Saini
                 </h1>
-                <p class="hero-subtitle">
-                    Transforming data into actionable insights through machine learning, 
+                <h2 class="text-2xl font-semibold text-base-content/70 mb-6">Data Scientist & ML Engineer</h2>
+                <p class="py-6 text-lg text-base-content/80 max-w-2xl mx-auto lg:mx-0">
+                    Transforming complex data into actionable insights through machine learning, 
                     statistical analysis, and innovative solutions. Specializing in recommendation systems, 
                     algorithmic trading, and predictive modeling.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary expensive-btn">Get In Touch</a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <i class="fas fa-eye"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-lg">
+                        <i class="fas fa-paper-plane"></i>
+                        Get In Touch
+                    </a>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-cards">
-                    <div class="card card-1">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Analytics</span>
+                <div class="stats stats-horizontal shadow justify-center lg:justify-start">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <i class="fas fa-project-diagram text-3xl"></i>
+                        </div>
+                        <div class="stat-title">Projects</div>
+                        <div class="stat-value text-primary">5+</div>
                     </div>
-                    <div class="card card-2">
-                        <i class="fas fa-brain"></i>
-                        <span>ML/AI</span>
-                    </div>
-                    <div class="card card-3">
-                        <i class="fas fa-database"></i>
-                        <span>Data</span>
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <div class="stat-title">Accuracy</div>
+                        <div class="stat-value text-secondary">90%</div>
                     </div>
                 </div>
             </div>
@@ -92,125 +131,184 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate Data Scientist with expertise in machine learning, 
-                        statistical analysis, and data visualization. I specialize in turning 
-                        complex data into meaningful insights that drive business decisions.
-                    </p>
-                    <p>
-                        I am a fresher with strong academic knowledge and hands-on project experience in Python, SQL, and various ML frameworks. 
-                        I have completed projects such as movie recommendation systems, algorithmic trading applications, and real estate price prediction models as part of my learning journey.
-                    </p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Projects Completed</p>
+    <section id="about" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="rect-badge mx-auto mb-6">
+                    <i class="fas fa-id-badge mr-2"></i> About
+                </div>
+                <h2 class="section-heading-expensive">Get to know me</h2>
+                <p class="text-lg text-base-content/70 max-w-2xl mx-auto">Passionate about turning data into meaningful insights</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">
+                                <i class="fas fa-user-circle"></i>
+                                Who I am
+                            </h3>
+                            <p>I'm a passionate Data Scientist with expertise in machine learning, 
+                            statistical analysis, and data visualization. I specialize in turning 
+                            complex data into meaningful insights that drive business decisions.</p>
                         </div>
-                        <div class="stat">
-                            <h3>90%</h3>
-                            <p>Model Accuracy</p>
+                    </div>
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary">
+                                <i class="fas fa-road"></i>
+                                My Journey
+                            </h3>
+                            <p>I am a fresher with strong academic knowledge and hands-on project experience in Python, SQL, and various ML frameworks. 
+                            I have completed projects such as movie recommendation systems, algorithmic trading applications, and real estate price prediction models.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title text-accent">
+                                <i class="fas fa-cogs"></i>
+                                What I do
+                            </h3>
+                            <p>I build intelligent systems that learn from data, create predictive models, 
+                            and develop recommendation engines that help businesses make better decisions.</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="profile.png" alt="Profile Picture" class="profile-pic" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 24px rgba(60,60,120,0.10); border: 4px solid #fff;" />
+                <div class="flex justify-center">
+                    <div class="avatar">
+                        <div class="w-80 h-80 rounded-full ring-4 ring-primary/20 ring-offset-4 ring-offset-base-100">
+                            <img src="profile.png" alt="Profile Picture" class="rounded-full" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
+    <section id="skills" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="rect-badge mx-auto mb-6">
+                    <i class="fas fa-lightbulb mr-2"></i> Skills
+                </div>
+                <h2 class="section-heading-expensive">Technologies I work with</h2>
+                <p class="text-lg text-base-content/70 max-w-2xl mx-auto">My technical expertise and specializations</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-code text-2xl text-primary"></i>
+                            <h3 class="card-title">Programming Languages</h3>
                         </div>
-                        <div class="skill-item">
-                            <span>SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Python</span>
+                                    <span class="text-primary font-semibold">95%</span>
+                                </div>
+                                <progress class="progress progress-primary w-full" value="95" max="100"></progress>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">SQL</span>
+                                    <span class="text-primary font-semibold">90%</span>
+                                </div>
+                                <progress class="progress progress-primary w-full" value="90" max="100"></progress>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Scikit-learn</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-brain text-2xl text-secondary"></i>
+                            <h3 class="card-title">Machine Learning</h3>
                         </div>
-                        <div class="skill-item">
-                            <span>Streamlit</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Scikit-learn</span>
+                                    <span class="text-secondary font-semibold">90%</span>
+                                </div>
+                                <progress class="progress progress-secondary w-full" value="90" max="100"></progress>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Scikit-learn</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Streamlit</span>
+                                    <span class="text-secondary font-semibold">85%</span>
+                                </div>
+                                <progress class="progress progress-secondary w-full" value="85" max="100"></progress>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Visualization</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Matplotlib</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Seaborn</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Plotly</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">TensorFlow</span>
+                                    <span class="text-secondary font-semibold">80%</span>
+                                </div>
+                                <progress class="progress progress-secondary w-full" value="80" max="100"></progress>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Specializations</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Recommendation Systems</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-chart-bar text-2xl text-accent"></i>
+                            <h3 class="card-title">Data Visualization</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Matplotlib</span>
+                                    <span class="text-accent font-semibold">85%</span>
+                                </div>
+                                <progress class="progress progress-accent w-full" value="85" max="100"></progress>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Seaborn</span>
+                                    <span class="text-accent font-semibold">90%</span>
+                                </div>
+                                <progress class="progress progress-accent w-full" value="90" max="100"></progress>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Plotly</span>
+                                    <span class="text-accent font-semibold">80%</span>
+                                </div>
+                                <progress class="progress progress-accent w-full" value="80" max="100"></progress>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>Algorithmic Trading</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-star text-2xl text-primary"></i>
+                            <h3 class="card-title">Specializations</h3>
                         </div>
-                        <div class="skill-item">
-                            <span>Predictive Modeling</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Recommendation Systems</span>
+                                    <span class="text-primary font-semibold">90%</span>
+                                </div>
+                                <progress class="progress progress-primary w-full" value="90" max="100"></progress>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Algorithmic Trading</span>
+                                    <span class="text-primary font-semibold">85%</span>
+                                </div>
+                                <progress class="progress progress-primary w-full" value="85" max="100"></progress>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Predictive Modeling</span>
+                                    <span class="text-primary font-semibold">88%</span>
+                                </div>
+                                <progress class="progress progress-primary w-full" value="88" max="100"></progress>
                             </div>
                         </div>
                     </div>
@@ -220,80 +318,125 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Movie Recommendation System</h3>
+    <section id="projects" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="rect-badge mx-auto mb-6">
+                    <i class="fas fa-flask mr-2"></i> Projects
+                </div>
+                <h2 class="section-heading-expensive">Featured work</h2>
+                <p class="text-lg text-base-content/70 max-w-2xl mx-auto">Some of my recent projects and applications</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar placeholder">
+                            <div class="bg-gradient-to-r from-primary to-secondary text-primary-content rounded-full w-24">
+                                <i class="fas fa-film text-3xl"></i>
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="card-title">Movie Recommendation System</h3>
+                            <div class="flex gap-2">
+                                <a href="https://mrs-system-23glkb7jpwnvotrjakcnym.streamlit.app" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/captainpc786" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
                         <p>Developed a content-based movie recommendation system using machine learning algorithms to suggest personalized movies based on user preferences and viewing history.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Streamlit</span>
-                            <span>Scikit-learn</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://mrs-system-23glkb7jpwnvotrjakcnym.streamlit.app" class="project-link" target="_blank">Live Demo</a>
-                            <a href="https://github.com/captainpc786" class="project-link" target="_blank">GitHub</a>
+                        <div class="card-actions justify-start mt-4">
+                            <div class="badge badge-primary expensive-badge">Python</div>
+                            <div class="badge badge-secondary expensive-badge">Streamlit</div>
+                            <div class="badge badge-accent expensive-badge">Scikit-learn</div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Upstox Algo Trading App</h3>
-                        <p>Built an algorithmic trading application for Upstox platform with automated trading strategies, real-time market data analysis, and 
-                            portfolio management features.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Streamlit</span>
-                            <span>Pandas</span>
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar placeholder">
+                            <div class="bg-gradient-to-r from-secondary to-accent text-secondary-content rounded-full w-24">
+                                <i class="fas fa-chart-line text-3xl"></i>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://upstox-algo-trade-app.onrender.com" class="project-link" target="_blank">Live Demo</a>
-                            <a href="https://github.com/captainpc786" class="project-link" target="_blank">GitHub</a>
+                    </figure>
+                    <div class="card-body">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="card-title">Upstox Algo Trading App</h3>
+                            <div class="flex gap-2">
+                                <a href="https://upstox-algo-trade-app.onrender.com" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/captainpc786" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p>Built an algorithmic trading application for Upstox platform with automated trading strategies, real-time market data analysis, and portfolio management features.</p>
+                        <div class="card-actions justify-start mt-4">
+                            <div class="badge badge-primary expensive-badge">Python</div>
+                            <div class="badge badge-secondary expensive-badge">Streamlit</div>
+                            <div class="badge badge-accent expensive-badge">Scikit-learn</div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Bangalore House Price Prediction</h3>
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar placeholder">
+                            <div class="bg-gradient-to-r from-accent to-primary text-accent-content rounded-full w-24">
+                                <i class="fas fa-home text-3xl"></i>
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="card-title">Bangalore House Price Prediction</h3>
+                            <div class="flex gap-2">
+                                <a href="#" class="btn btn-ghost btn-sm">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/captainpc786" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
                         <p>Developed a machine learning model to predict house prices in Bangalore using various features like location, area, amenities, and market trends.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                            <span>Pandas</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
-                            <a href="https://github.com/captainpc786" class="project-link" target="_blank">GitHub</a>
+                        <div class="card-actions justify-start mt-4">
+                            <div class="badge badge-primary expensive-badge">Python</div>
+                            <div class="badge badge-secondary expensive-badge">Scikit-learn</div>
+                            <div class="badge badge-accent expensive-badge">Pandas</div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Car Selling Data Analysis</h3>
-                        <p>Comprehensive analysis of car selling data including market trends, price analysis, and insights for buyers and sellers in the automotive market.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Matplotlib</span>
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-4">
+                    <figure class="px-10 pt-10">
+                        <div class="avatar placeholder">
+                            <div class="bg-gradient-to-r from-primary to-accent text-primary-content rounded-full w-24">
+                                <i class="fas fa-car text-3xl"></i>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/captainpc786/Car-Selling-Anlaysis" class="project-link" target="_blank">View Project</a>
-                            <a href="https://github.com/captainpc786" class="project-link" target="_blank">GitHub</a>
+                    </figure>
+                    <div class="card-body">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="card-title">Car Selling Data Analysis</h3>
+                            <div class="flex gap-2">
+                                <a href="https://github.com/captainpc786/Car-Selling-Anlaysis" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/captainpc786" class="btn btn-ghost btn-sm" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p>Comprehensive analysis of car selling data including market trends, price analysis, and insights for buyers and sellers in the automotive market.</p>
+                        <div class="card-actions justify-start mt-4">
+                            <div class="badge badge-primary expensive-badge">Python</div>
+                            <div class="badge badge-secondary expensive-badge">Pandas</div>
+                            <div class="badge badge-accent expensive-badge">Matplotlib</div>
                         </div>
                     </div>
                 </div>
@@ -302,106 +445,234 @@
     </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="resume">
-        <div class="container">
-            <div class="resume-header" style="text-align:center; margin-bottom: 32px;">
-                <h1 style="font-size:2.5rem; font-weight:700; margin-bottom: 0;">Pushpendra Sainni</h1>
-                <div style="font-size:1.1rem; color:#666; margin-bottom: 8px;">pushpendrachauhan9494@gmail.com &nbsp;|&nbsp; <a href="https://github.com/captainpc786" target="_blank">GitHub</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/pushpendra-saini-153221316/" target="_blank">LinkedIn</a></div>
+    <section id="resume" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="rect-badge mx-auto mb-6">
+                    <i class="fas fa-scroll mr-2"></i> Resume
+                </div>
+                <h2 class="section-heading-expensive">My education & certifications</h2>
+                <p class="text-lg text-base-content/70 max-w-2xl mx-auto">I am a fresher, eager to start my professional journey. Here are my academic achievements and projects.</p>
             </div>
-            <div style="margin-bottom: 20px; text-align:center;">
-                <a href="pushpendraresume.pdf" class="btn btn-primary" download style="font-size:1.1rem; padding:10px 28px;">Download Resume (PDF)</a>
+            <div class="text-center mb-12">
+                <a href="pushpendraresume.pdf" class="btn btn-primary btn-lg" download>
+                    <i class="fas fa-download"></i>
+                    Download Resume (PDF)
+                </a>
             </div>
-            <div style="margin-bottom: 30px;">
-                <embed src="pushpendraresume.pdf" type="application/pdf" width="100%" height="600px" style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);" />
-            </div>
-            <div class="resume-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:32px;">
-                <div class="resume-card">
-                    <h3><i class="fas fa-user-circle"></i> Profile</h3>
-                    <p>Detail-oriented and motivated BCA graduate with hands-on experience in data analysis, machine learning, and Python-based development. Proficient in data wrangling, EDA, and model building using Pandas, NumPy, Scikit-learn, and Streamlit. Seeking an entry-level role in Data Analytics or Machine Learning to apply technical and analytical skills to solve real-world problems.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-user-circle text-2xl text-primary"></i>
+                            <h3 class="card-title">Profile</h3>
+                        </div>
+                        <p>Detail-oriented and motivated BCA graduate with hands-on experience in data analysis, machine learning, and Python-based development. Proficient in data wrangling, EDA, and model building using Pandas, NumPy, Scikit-learn, and Streamlit.</p>
+                    </div>
                 </div>
-                <div class="resume-card">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <p><strong>University Of Rajasthan</strong> <span style="float:right; color:#888; font-size:0.95em;">Jaipur, India | 2022 – 2025</span><br>
-                    <em>Bachelor of Computer Application</em></p>
-                    <ul>
-                        <li>Among the top 15% of the batch</li>
-                        <li>Relevant coursework: Python, Data Science, Machine Learning, Database System, etc.</li>
-                    </ul>
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-graduation-cap text-2xl text-secondary"></i>
+                            <h3 class="card-title">Education</h3>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-secondary">University Of Rajasthan</h4>
+                            <p class="text-sm text-base-content/70 mb-2">Jaipur, India | 2022 – 2025</p>
+                            <p class="italic mb-3">Bachelor of Computer Application</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Among the top 15% of the batch</li>
+                                <li>Relevant coursework: Python, Data Science, Machine Learning, Database System</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="resume-card">
-                    <h3><i class="fas fa-cogs"></i> Skills</h3>
-                    <ul>
-                        <li><strong>Programming:</strong> Python</li>
-                        <li><strong>Data Analysis & ML:</strong> Pandas, Numpy, Scikit-learn, Matplotlib</li>
-                        <li><strong>Tools & IDEs:</strong> VS Code, Jupyter Notebook, Streamlit, Git, Render</li>
-                    </ul>
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-cogs text-2xl text-accent"></i>
+                            <h3 class="card-title">Skills</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="font-bold text-accent">Programming</h4>
+                                <p class="text-sm">Python</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent">Data Analysis & ML</h4>
+                                <p class="text-sm">Pandas, Numpy, Scikit-learn, Matplotlib</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent">Tools & IDEs</h4>
+                                <p class="text-sm">VS Code, Jupyter Notebook, Streamlit, Git, Render</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="resume-card">
-                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
-                    <ul>
-                        <li>AI – Data Scientist Certification, AU Future Skill Academy — Mar 2025</li>
-                    </ul>
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-certificate text-2xl text-primary"></i>
+                            <h3 class="card-title">Certifications</h3>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary">AI – Data Scientist Certification</h4>
+                            <p class="text-sm">AU Future Skill Academy — Mar 2025</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="resume-card" style="grid-column: 1 / -1;">
-                    <h3><i class="fas fa-briefcase"></i> Projects</h3>
-                    <ul>
-                        <li><strong>Upstox Algo Trade App:</strong> Developed an automated trading system using Upstox API to access option chain data, market quotes, and place orders. Built using Python, Jupyter Notebook, deployed using Streamlit and hosted on Render.</li>
-                        <li><strong>Car Selling Data Analysis:</strong> Analyzed a car sales dataset using Pandas and NumPy to uncover trends and optimize insights. Cleaned data based on data quality dimensions and performed in-depth analysis.</li>
-                        <li><strong>Movie Recommendation System:</strong> Created a content-based recommendation system that suggests relevant movies based on user search input. Utilized CountVectorizer and Cosine Similarity from Scikit-learn.</li>
-                    </ul>
+                <div class="card bg-base-100 shadow-xl lg:col-span-3">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-briefcase text-2xl text-secondary"></i>
+                            <h3 class="card-title">Projects</h3>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="font-bold text-secondary mb-2">Upstox Algo Trade App</h4>
+                                <p class="text-sm">Developed an automated trading system using Upstox API to access option chain data, market quotes, and place orders. Built using Python, Jupyter Notebook, deployed using Streamlit and hosted on Render.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary mb-2">Car Selling Data Analysis</h4>
+                                <p class="text-sm">Analyzed a car sales dataset using Pandas and NumPy to uncover trends and optimize insights. Cleaned data based on data quality dimensions and performed in-depth analysis.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary mb-2">Movie Recommendation System</h4>
+                                <p class="text-sm">Created a content-based recommendation system that suggests relevant movies based on user search input. Utilized CountVectorizer and Cosine Similarity from Scikit-learn.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>pushpendrachauhan400@gmail.com</p>
+    <section id="contact" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="rect-badge mx-auto mb-6">
+                    <i class="fas fa-comments mr-2"></i> Contact
+                </div>
+                <h2 class="section-heading-expensive">Let's work together</h2>
+                <p class="text-lg text-base-content/70 max-w-2xl mx-auto">Get in touch for collaborations or opportunities</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <div class="avatar placeholder">
+                                    <div class="bg-primary text-primary-content rounded-full w-12">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Email</h3>
+                                    <p class="text-base-content/70">pushpendrachauhan400@gmail.com</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/pushpendra-saini-153221316/" target="_blank" style="color: #666; text-decoration: none;">linkedin.com/in/pushpendra-saini-153221316/</a></p>
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <div class="avatar placeholder">
+                                    <div class="bg-secondary text-secondary-content rounded-full w-12">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">LinkedIn</h3>
+                                    <a href="https://www.linkedin.com/in/pushpendra-saini-153221316/" target="_blank" class="link link-primary">
+                                        linkedin.com/in/pushpendra-saini-153221316/
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/captainpc786" target="_blank" style="color: #666; text-decoration: none;">github.com/captainpc786</a></p>
+                    <div class="card bg-base-200 shadow-xl">
+                        <div class="card-body">
+                            <div class="flex items-center gap-4">
+                                <div class="avatar placeholder">
+                                    <div class="bg-accent text-accent-content rounded-full w-12">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">GitHub</h3>
+                                    <a href="https://github.com/captainpc786" target="_blank" class="link link-primary">
+                                        github.com/captainpc786
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                <div class="card bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title mb-6">Send me a message</h3>
+                        <form class="space-y-4">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Name</span>
+                                </label>
+                                <input type="text" id="name" placeholder="Your Name" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Email</span>
+                                </label>
+                                <input type="email" id="email" placeholder="Your Email" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Message</span>
+                                </label>
+                                <textarea id="message" placeholder="Your Message" class="textarea textarea-bordered h-24" required></textarea>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Data Scientist Portfolio. All rights reserved.</p>
+    <footer class="footer footer-center p-10 bg-base-300 text-base-content">
+        <div>
+            <div class="avatar placeholder mb-4">
+                <div class="bg-gradient-to-r from-primary to-secondary text-primary-content rounded-full w-16">
+                    <span class="text-2xl font-bold">PS</span>
+                </div>
+            </div>
+            <p class="font-bold">Pushpendra Saini</p>
+            <p class="text-base-content/70">Data Scientist & ML Engineer</p>
+            <div class="flex gap-4 mt-4">
+                <a href="https://github.com/captainpc786" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pushpendra-saini-153221316/" target="_blank" class="btn btn-ghost btn-circle">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a href="#home" class="link link-hover">Home</a>
+                <a href="#about" class="link link-hover">About</a>
+                <a href="#projects" class="link link-hover">Projects</a>
+                <a href="#contact" class="link link-hover">Contact</a>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2024 Pushpendra Saini. All rights reserved.</p>
         </div>
     </footer>
 
